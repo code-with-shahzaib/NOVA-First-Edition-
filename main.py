@@ -1,4 +1,6 @@
 wake_up_words = ("hi", "hello", "assalam-o-alaikum")
+is_active = False
+
 
 while True:
     user_input = input("What you want to say to NOVA: ").strip().lower()
