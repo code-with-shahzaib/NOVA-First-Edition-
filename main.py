@@ -5,14 +5,27 @@ is_active = False
 while True:
     user_input = input("What you want to say to NOVA: ").strip().lower()
 
-    if user_input in wake_up_words:
+    if not is_active:
+        if user_input in wake_up_words:
 
-        if user_input == "assalam-o-alaikum":
-            print("Wa alaikum salam sir. How are you?")
+            if user_input == "assalam-o-alaikum":
+                print("Wa Alaikum Salam Sir. How are you?")
+
+            else:
+                print("Hello Sir. How are you?")
+
+            is_active = True
 
         else:
-            print("Hello, Sir. How are you?")
+            print("NOVA waiting for the right wake-up call.")
 
     else:
-        print("I'm waiting for the right wake-up call.....")
+        if user_input == "exit":
+            print("Allah Hafiz Sir.")
+            is_active = False
+
+        else:
+            print("NOVA is active. Command Received")
+
+
 
