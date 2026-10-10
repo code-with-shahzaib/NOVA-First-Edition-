@@ -21,7 +21,7 @@ while True:
 
     else:
         if user_input == "exit":
-            print("Allah Hafiz Sir.")
+            print("Allah Hafiz Sir!")
             is_active = False
 
         else:
