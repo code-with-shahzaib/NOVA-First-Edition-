@@ -1,4 +1,11 @@
 wake_up_words = ("hi", "hello", "assalam-o-alaikum")
+help = """
+NOVA Commands:
+- time  : Show the current time
+- date  : Show today's date
+- math  : Perform basic calculations
+- exit  : Return to waiting mode
+"""
 is_active = False
 
 while True:
@@ -24,9 +31,7 @@ while True:
             is_active = False
 
         elif user_input == "help":
-            print(
-                "This Tool is created with Python Programming Language. This is the product of DreamTechX. This tool is simply used for asking current date/time and for some MATHS problem (only Addition, Subtraction, Multiplication, Division). This tool keep waiting for the wakeup call after being run when the right wakeup call received it perfrom specific function after the greeting according to the user. when user enter exit this tool then return to it's waiting state.")
-
+            print(help)
 
         else:
-            print("NOVA is active. Command Received")
+            print("I can't recognize it sir! Please type 'help' for more information.")
