@@ -1,5 +1,8 @@
+from datetime import datetime
+from time import strftime
+
 wake_up_words = ("hi", "hello", "assalam-o-alaikum")
-help = """
+help_text = """
 NOVA Commands:
 - time  : Show the current time
 - date  : Show today's date
@@ -7,6 +10,14 @@ NOVA Commands:
 - exit  : Return to waiting mode
 """
 is_active = False
+
+def get_current_time() -> str:
+    """This Function is used to get current time of the system and represent it in desired format."""
+    current_time = datetime.now().time()
+    formatted_time = strftime("%I:%M %p")
+    return formatted_time
+
+
 
 while True:
     user_input = input("What you want to say to NOVA: ").strip().lower()
@@ -31,7 +42,9 @@ while True:
             is_active = False
 
         elif user_input == "help":
-            print(help)
+            print(help_text)
 
+        elif user_input == "time":
+            print(get_current_time())
         else:
             print("I can't recognize it sir! Please type 'help' for more information.")
