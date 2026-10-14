@@ -1,5 +1,4 @@
 from datetime import datetime
-from time import strftime
 
 wake_up_words = ("hi", "hello", "assalam-o-alaikum")
 help_text = """
@@ -14,7 +13,7 @@ is_active = False
 def get_current_time() -> str:
     """This Function is used to get current time of the system and represent it in desired format."""
     current_time = datetime.now().time()
-    formatted_time = strftime("%I:%M %p")
+    formatted_time = current_time.strftime("%I:%M %p")
     return formatted_time
 
 
