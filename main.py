@@ -16,6 +16,12 @@ def get_current_time() -> str:
     formatted_time = current_time.strftime("%I:%M %p")
     return formatted_time
 
+def get_current_date() -> str:
+    """This Function is used to get current date and represent it in desired format."""
+    current_date = datetime.now().date()
+    formatted_date = current_date.strftime("%d %B, %Y")
+    return formatted_date
+
 
 
 while True:
@@ -45,5 +51,9 @@ while True:
 
         elif user_input == "time":
             print(get_current_time())
+
+        elif user_input == "date":
+            print(get_current_date())
+
         else:
             print("I can't recognize it sir! Please type 'help' for more information.")
